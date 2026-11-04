@@ -1,0 +1,9 @@
+
+
+The Iris Flower Predictor is a Machine Learning-based web application developed to identify the species of an Iris flower from its physical measurements. The system uses four input features: sepal length, sepal width, petal length, and petal width. An Iris dataset containing measurements of three Iris species—Iris Setosa, Iris Versicolor, and Iris Virginica—is used to train and evaluate the Machine Learning model.
+
+In this project, the dataset is processed using Python and Pandas, and a classification model is trained using Logistic Regression from the Scikit-learn library. The trained model is evaluated using test data and saved as a reusable model file. A Flask backend is then used to integrate the Machine Learning model with a web application.
+
+The user can enter the four flower measurements through a modern, interactive web interface. Flask receives the input values, passes them to the trained model, and returns the predicted Iris species along with the model's confidence. The frontend is developed using HTML, CSS, and JavaScript, with a modern 3D and glassmorphism-style interface to provide an interactive user experience.
+
+The project demonstrates the complete Machine Learning workflow, including dataset preparation, feature selection, model training, model evaluation, model serialization, Flask integration, and web-based prediction. It serves as a beginner-friendly example of how a trained Machine Learning model can be converted into a practical web application.

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+    <div class="background"></div>
+
+
+    <main class="container result-container">
+
+
+        <div class="badge">
+            PREDICTION COMPLETE
+        </div>
+
+
+        <h1>
+            Flower Identified
+        </h1>
+
+
+        <section class="result-card">
+
+
+            <div class="flower-icon">
+                🌸
+            </div>
+
+
+            <p class="result-label">
+                Predicted Species
+            </p>
+
+
+            <h2 class="prediction">
+                {{ prediction | capitalize }}
+            </h2>
+
+
+            <div class="confidence">
+
+                <div class="confidence-title">
+                    Model Confidence
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="width: {{ confidence }}%">
+                    </div>
+
+                </div>
+
+                <strong>
+                    {{ confidence }}%
+                </strong>
+
+            </div>
+
+
+            <div class="measurements">
+
+                <div>
+                    <span>Sepal Length</span>
+                    <strong>
+                        {{ sepal_length }} cm
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Sepal Width</span>
+                    <strong>
+                        {{ sepal_width }} cm
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Petal Length</span>
+                    <strong>
+                        {{ petal_length }} cm
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Petal Width</span>
+                    <strong>
+                        {{ petal_width }} cm
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <a href="/" class="back-button">
+        

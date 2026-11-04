@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Iris Flower Predictor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+    <div class="background"></div>
+
+    <main class="container">
+
+        <section class="hero">
+
+            <div class="badge">
+                MACHINE LEARNING
+            </div>
+
+            <h1>
+                Iris Flower
+                <span>Predictor</span>
+            </h1>
+
+            <p>
+                Enter four flower measurements and let the
+                machine learning model identify the Iris species.
+            </p>
+
+        </section>
+
+
+        <section class="card">
+
+            <div class="card-header">
+
+                <h2>Flower Measurements</h2>
+
+                <p>
+                    Enter measurements in centimeters
+                </p>
+
+            </div>
+
+
+            <form action="/predict"
+                  method="POST">
+
+
+                <div class="input-grid">
+
+
+                    <div class="input-box">
+
+                        <label>
+                            Sepal Length
+                        </label>
+
+                        <input
+                            type="number"
+                            name="sepal_length"
+                            step="0.1"
+                            min="0"
+                            placeholder="Example: 5.1"
+                            required
+                        >
+
+                        <span>cm</span>
+
+                    </div>
+
+
+                    <div class="input-box">
+
+                        <label>
+                            Sepal Width
+                        </label>
+
+                        <input
+                            type="number"
+                            name="sepal_width"
+                            step="0.1"
+                            min="0"
+                            placeholder="Example: 3.5"
+                            required
+                        >
+
+                        <span>cm</span>
+
+                    </div>
+
+
+                    <div class="input-box">
+
+                        <label>
+                            Petal Length
+                        </label>
+
+                        <input
+                            type="number"
+                            name="petal_length"
+                            step="0.1"
+                            min="0"
+                            placeholder="Example: 1.4"
+                            required
+                        >
+
+                        <span>cm</span>
+
+                    </div>
+
+
+                    <div class="input-box">
+
+                        <label>
+                            Petal Width
+                        </label>
+
+                        <input
+                            type="number"
+                            name="petal_width"
+                            step="0.1"
+                            min="0"
+                            placeholder="Example: 0.2"
+                            required
+                        >
+
+                        <span>cm</span>
+
+                    </div>
+
+
+                </div>
+
+
+                <button type="submit">
+
+                    <span>
+                        Predict Flower
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </form>
+
+        </section>
+
+
+        <section class="info">
+
+            <div>
+                <strong>4</strong>
+                <span>Features</span>
+            </div>
+
+            <div>
+                <strong>3</strong>
+                <span>Species</span>
+            </div>
+
+            <div>
+                <strong>100%</strong>
+                <span>Test Accuracy</span>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}">
+    </script>
+
+</body>
+
+</html>
